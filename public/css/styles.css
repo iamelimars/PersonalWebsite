@@ -1,0 +1,423 @@
+@import url(../bower_components/bootstrap/dist/css/bootstrap.min.css);
+@import url("https://fonts.googleapis.com/css?family=Damion|Yellowtail");
+@import url("https://fonts.googleapis.com/css?family=Quicksand");
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,200,300");
+/* $tan: rgb(246,247,249); */
+/* line 9, ../sass/_main.scss */
+html, body {
+  height: 100%;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* line 13, ../sass/_main.scss */
+.section {
+  min-height: 100%;
+  position: relative;
+  padding: 5% 0;
+  /* background: $gold; */
+}
+/* line 18, ../sass/_main.scss */
+.section h1 {
+  color: #ebca9d;
+}
+
+/* line 23, ../sass/_main.scss */
+#fullpage {
+  top: 100%;
+}
+
+/* line 27, ../sass/_main.scss */
+a i {
+  margin-right: 20px;
+  font-size: 20px !important;
+}
+
+/* line 33, ../sass/_main.scss */
+.menu-btn {
+  right: none;
+  bottom: none;
+  top: 10px;
+  left: 10px;
+}
+
+/* line 41, ../sass/_main.scss */
+.side-nav div {
+  margin-top: 50px;
+}
+
+/* line 46, ../sass/_main.scss */
+.menu {
+  position: fixed;
+  left: 10;
+  /* right: 0; */
+  top: 30px;
+  z-index: 9999;
+  transform: translate3d(0, -50%, 0);
+  width: 20px;
+  padding: 18px 14px;
+  margin: auto;
+  cursor: pointer;
+}
+
+/* line 58, ../sass/_main.scss */
+.menu div {
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 2px;
+  margin-bottom: 3px;
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.4s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* line 66, ../sass/_main.scss */
+.menu div:first-child:after,
+.menu div:first-child:before {
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.2s cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+/* line 70, ../sass/_main.scss */
+.menu div:nth-child(2):after,
+.menu div:nth-child(2):before {
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0.1s, opacity 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0.08s;
+}
+
+/* line 74, ../sass/_main.scss */
+.menu div:last-child {
+  margin-bottom: 0;
+}
+
+/* line 77, ../sass/_main.scss */
+.menu div:last-child:after,
+.menu div:last-child:before {
+  transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1) 0.2s, opacity 0.2s cubic-bezier(0.19, 1, 0.22, 1) 0.18s;
+}
+
+/* line 81, ../sass/_main.scss */
+.menu div:after,
+.menu div:before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* line 90, ../sass/_main.scss */
+.menu div:before {
+  background: #b3b3b3;
+  opacity: 1;
+  transform: translate3d(0%, 0, 0);
+}
+
+/* line 95, ../sass/_main.scss */
+.menu div:after {
+  background: #ebca9d;
+  opacity: 0;
+  transform: translate3d(100%, 0, 0);
+}
+
+/* line 100, ../sass/_main.scss */
+.menu:hover div:before {
+  opacity: 0;
+  transform: translate3d(-100%, 0, 0);
+}
+
+/* line 104, ../sass/_main.scss */
+.menu:hover div:after {
+  opacity: 1;
+  transform: translate3d(0%, 0, 0);
+}
+
+/* line 108, ../sass/_main.scss */
+.menu.is-active div:nth-child(2) {
+  opacity: 0;
+}
+
+/* line 111, ../sass/_main.scss */
+.menu.is-active div:first-child {
+  transform: translate3d(0, 5px, 0) rotate3d(0, 0, 1, -45deg);
+}
+
+/* line 114, ../sass/_main.scss */
+.menu.is-active div:last-child {
+  transform: translate3d(0, -5px, 0) rotate3d(0, 0, 1, 45deg);
+}
+
+/* line 120, ../sass/_main.scss */
+.content {
+  /* display: block; */
+  /* margin: 5% auto 5% auto; */
+  padding: 10% 0;
+  /* display: flex;
+  align-items: center; */
+  /* top: auto; */
+  /* position: absolute; */
+  /* position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 80%;
+    height: 80%;
+    margin: auto; */
+}
+/* line 136, ../sass/_main.scss */
+.content i {
+  color: #ebca9d;
+}
+
+/* line 141, ../sass/_main.scss */
+#quote {
+  padding: 20% 0;
+}
+
+/* line 144, ../sass/_main.scss */
+#pricing {
+  padding: 20% 0;
+}
+
+/* line 147, ../sass/_main.scss */
+#services {
+  padding: 15% 0;
+}
+
+/* line 150, ../sass/_main.scss */
+#contact {
+  padding: 10% 0;
+}
+
+/* line 154, ../sass/_main.scss */
+#works img {
+  -webkit-transition: box-shadow 0.7s;
+  /* Safari 3.1 to 6.0 */
+  transition: box-shadow 0.7s;
+}
+/* line 158, ../sass/_main.scss */
+#works img:hover {
+  box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.2);
+}
+/* line 161, ../sass/_main.scss */
+#works h4 {
+  font-size: 13px;
+  color: grey;
+}
+
+/* line 168, ../sass/_main.scss */
+.white {
+  background: white;
+}
+
+/* line 171, ../sass/_main.scss */
+.tan {
+  background: #f5f1f2;
+}
+
+/* line 174, ../sass/_main.scss */
+.gold {
+  background: #ebca9d;
+}
+
+/* line 177, ../sass/_main.scss */
+.light-gold {
+  background: #f0debc;
+}
+
+/* line 181, ../sass/_main.scss */
+#hero {
+  /* margin-top: -20px; */
+  background: url("../images/glasses.jpeg") center;
+  background-size: cover;
+  height: 100%;
+  top: 0;
+  /* background-attachment: fixed; */
+}
+/* line 188, ../sass/_main.scss */
+#hero h3 {
+  color: #ebca9d;
+  top: 45%;
+  position: relative;
+  text-align: center;
+  /* font-family: 'Poiret One', cursive; */
+  font-family: 'Yellowtail', cursive;
+  font-size: 60px;
+}
+
+/* Skills Bar */
+/* line 201, ../sass/_main.scss */
+#skills {
+  /* background: #E0E3E9; */
+  /*background: #FFCCBD;*/
+  /*background: #C06C84;*/
+  /* color: #4D505B; */
+  /* min-height: auto; */
+}
+
+/* line 209, ../sass/_main.scss */
+.skillbar {
+  position: relative;
+  display: block;
+  margin-bottom: 15px;
+  width: 100%;
+  background: #fff;
+  height: 35px;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -ms-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+}
+
+/* line 231, ../sass/_main.scss */
+.skillbar-title {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110px;
+  font-weight: bold;
+  font-size: 13px;
+  color: #ebca9d;
+  background: white;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 4px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+/* line 250, ../sass/_main.scss */
+.skillbar-title span {
+  display: block;
+  background: transparent;
+  padding: 0 20px;
+  height: 35px;
+  line-height: 35px;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+/* line 264, ../sass/_main.scss */
+.skillbar-bar {
+  height: 35px;
+  width: 0px;
+  background: #ebca9d;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+
+/* line 273, ../sass/_main.scss */
+.skill-bar-percent {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  font-size: 11px;
+  height: 35px;
+  line-height: 35px;
+  color: #ffffff;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+/* label color */
+/* line 286, ../sass/_main.scss */
+.input-field label {
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  font-size: 11px;
+  font-weight: 100;
+}
+
+/* label focus color */
+/* line 293, ../sass/_main.scss */
+.input-field input[type=text]:focus + label {
+  color: grey;
+  font-size: 11px;
+  font-weight: 100;
+}
+
+/* label underline focus color */
+/* line 299, ../sass/_main.scss */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #ebca9d;
+  box-shadow: 0 1px 0 0 #ebca9d;
+}
+
+/* valid color */
+/* line 304, ../sass/_main.scss */
+.input-field input[type=text].valid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* invalid color */
+/* line 309, ../sass/_main.scss */
+.input-field input[type=text].invalid {
+  border-bottom: 1px solid #000;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+/* icon prefix focus color */
+/* line 314, ../sass/_main.scss */
+.input-field .prefix.active {
+  color: red;
+}
+
+/* line 318, ../sass/_main.scss */
+.input-field input[type=email]:focus + label {
+  color: grey;
+  font-size: 11px;
+  font-weight: 100;
+}
+
+/* label underline focus color */
+/* line 324, ../sass/_main.scss */
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid #ebca9d;
+  box-shadow: 0 1px 0 0 #ebca9d;
+}
+
+/* line 328, ../sass/_main.scss */
+.input-field textarea[class=materialize-textarea]:focus {
+  color: grey;
+  font-size: 11px;
+  font-weight: 100;
+}
+
+/* label underline focus color */
+/* line 334, ../sass/_main.scss */
+.input-field textarea[class=materialize-textarea]:focus {
+  border-bottom: 1px solid #ebca9d;
+  box-shadow: 0 1px 0 0 #ebca9d;
+}
+
+/* line 339, ../sass/_main.scss */
+.submit {
+  background: #ebca9d;
+  color: white;
+  border-style: none;
+  height: 30px;
+  -webkit-transition: all 1s;
+  /* Safari */
+  transition: all 1s;
+}
+
+/* line 347, ../sass/_main.scss */
+.submit:hover {
+  background: black;
+  color: #ebca9d;
+}
